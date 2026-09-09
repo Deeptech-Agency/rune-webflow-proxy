@@ -1,8 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# rune-webflow-proxy
 
-## Getting Started
+A lightweight Next.js proxy that serves Webflow CMS data to the frontend via a clean JSON API.
 
-First, run the development server:
+## Endpoints
+
+- `GET /api/health` — Health check
+- `GET /api/careers` — List all careers from Webflow CMS
+- `GET /api/careers/:id` — Get a single career by Webflow item ID
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `WEBFLOW_API_TOKEN` | Yes | Bearer token for Webflow API v2 |
+| `WEBFLOW_COLLECTION_ID` | Yes | Webflow CMS collection ID |
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Create a `.env.local` from `.env.example` and add your Webflow token.
+
+## Deployment
+
+Deploy to Vercel. Add the environment variables in your project settings.
+
 
 ```bash
 npm run dev
