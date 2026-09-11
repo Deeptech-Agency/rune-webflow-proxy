@@ -2,7 +2,7 @@ const WEBFLOW_API_BASE = "https://api.webflow.com/v2";
 
 function getHeaders() {
   const token = process.env.WEBFLOW_API_TOKEN;
-  if (!token) throw new Error("Missing WEBFLOW_TOKEN environment variable");
+  if (!token) throw new Error("Missing WEBFLOW_API_TOKEN environment variable");
   return {
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
